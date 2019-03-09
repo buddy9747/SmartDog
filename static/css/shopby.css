@@ -1,0 +1,83 @@
+.servicBox{ text-align: center; }
+.servicBox .servic-icon{
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    line-height: 95px;
+    border-radius: 50%;
+    border: 15px solid #e8412e;
+    font-size: 45px;
+    color: #e8412e;
+    margin-bottom: 60px;
+    position: relative;
+    transition: all 0.3s ease 0s;
+
+}
+.servicBox:hover .servic-icon{
+    line-height: 105px;
+    border-width: 10px;
+    font-size: 52px;
+}
+.servicBox .servic-icon:before{
+    content: "";
+    width: 15px;
+    height: 100px;
+    background: #e8412e;
+    margin: 0 auto;
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    right: 0;
+    transition: all 0.3s ease 0s;
+}
+.servicBox:hover .servic-icon:before{ transform: rotateY(360deg); }
+.servicBox .servic-content{
+    padding: 50px 15px 0;
+    border-radius: 50% 50% 0 0;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+}
+.servicBox .servic-content:before{
+    content: "";
+    width: 100%;
+    height: 100px;
+    background: #e8412e;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.servicBox .title{
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: capitalize;
+    margin: 0 0 40px 0;
+}
+.servicBox .description{
+    font-size: 15px;
+    color: #6f6f6f;
+    line-height: 27px;
+}
+.servicBox.blue .servic-icon{
+    border-color: #1169e4;
+    color: #1169e4;
+}
+.servicBox.blue .servic-icon:before,
+.servicBox.blue .servic-content:before{ background: #1169e4; }
+.servicBox.green  .servic-icon{
+    border-color: #1e9239;
+    color: #1e9239;
+}
+.servicBox.green .servic-icon:before,
+.servicBox.green .servic-content:before{ background: #1e9239; }
+.servicBox.pink .servic-icon{
+    border-color: #d43061;
+    color: #d43061;
+}
+.servicBox.pink .service-icon:before,
+.servicBox.pink .service-content:before{ background: #d43061; }
+@media only screen and (max-width:990px){
+    .servicBox{ margin-bottom: 30px; }
+}
